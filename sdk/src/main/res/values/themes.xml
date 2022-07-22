@@ -1,0 +1,69 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CloudTipsSDKDemo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#272744</item>
+        <item name="colorSecondaryVariant">#272744</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CaptionForEditText">
+
+    </style>
+
+    <style name="CTTextViewCaption">
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#272744</item>
+    </style>
+
+    <style name="CTTextViewError">
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <style name="CTEditText">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/selector_text_edit_text</item>
+        <item name="android:background">@drawable/selector_bg_edit_text</item>
+        <item name="maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="CTRadioButtonAmount">
+        <item name="android:minWidth">89dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:paddingStart">21dp</item>
+        <item name="android:paddingEnd">21dp</item>
+        <item name="android:paddingTop">17dp</item>
+        <item name="android:paddingBottom">18dp</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#272744</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/selector_bg_radio_button_amount</item>
+        <item name="android:elevation">8dp</item>
+    </style>
+
+    <style name="SwitchTheme" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="colorAccent">#428BF9</item>
+        <item name="android:colorForeground">#797A7A</item>
+        <item name="colorSwitchThumbNormal">@android:color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CloudTips SDK Demo</string>
+    <string name="main_phone_hint">+7**********</string>
+    <string name="main_continue">Продолжить</string>
+    <string name="main_phone_error">Введите телефонный номер в формате +7**********</string>
+</resources>

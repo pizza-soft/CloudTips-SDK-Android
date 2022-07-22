@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".ui.TipsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/cloud_tips_logo"/>
+
+        <ImageView
+            android:id="@+id/imageViewClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_close_button" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray_divider"/>
+
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="19dp">
+
+            <TextView
+                android:id="@+id/textViewCardNumber"
+                style="@style/CTTextViewCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="@dimen/marginStart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/card_card_number"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextCardNumber"
+                style="@style/CTEditText"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginEnd="@dimen/marginEnd"
+                android:layout_marginTop="12dp"
+                android:nextFocusDown="@id/editTextExpDate"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:digits="0123456789 "
+                app:layout_constraintTop_toBottomOf="@id/textViewCardNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewPaymentSystem"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintTop_toTopOf="@id/editTextCardNumber"
+                app:layout_constraintBottom_toBottomOf="@id/editTextCardNumber"
+                app:layout_constraintEnd_toEndOf="@id/editTextCardNumber"/>
+
+            <TextView
+                android:id="@+id/textViewExpDate"
+                style="@style/CTTextViewCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="@dimen/marginStart"
+                app:layout_constraintTop_toBottomOf="@id/editTextCardNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/card_exp_date"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextExpDate"
+                style="@style/CTEditText"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginTop="12dp"
+                android:hint="@string/card_mm_yy"
+                android:nextFocusDown="@id/editTextCode"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:digits="0123456789/"
+                app:layout_constraintTop_toBottomOf="@id/textViewExpDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/editTextCode" />
+
+            <TextView
+                android:id="@+id/textViewCode"
+                style="@style/CTTextViewCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="31dp"
+                app:layout_constraintTop_toBottomOf="@id/editTextCardNumber"
+                app:layout_constraintStart_toEndOf="@id/editTextExpDate"
+                android:text="@string/card_code"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextCode"
+                style="@style/CTEditText"
+                android:layout_width="0dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginEnd="@dimen/marginEnd"
+                android:layout_marginTop="12dp"
+                android:hint="@string/card_cvc"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:maxLength="3"
+                app:layout_constraintTop_toBottomOf="@id/textViewCode"
+                app:layout_constraintStart_toEndOf="@id/editTextExpDate"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/buttonPay"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginEnd="@dimen/marginEnd"
+                app:layout_constraintTop_toBottomOf="@id/editTextExpDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_button_blue">
+
+                <TextView
+                    android:id="@+id/textViewButtonPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:text="Оплатить 100 ₽"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llSecureConnection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="26dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonPay">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_secure"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textSize="12sp"
+                    android:textColor="#393962"
+                    android:alpha="0.7"
+                    android:text="@string/card_secure_connection" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutBottom"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginEnd="@dimen/marginEnd"
+                app:layout_constraintTop_toBottomOf="@id/llSecureConnection"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageViewVisa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.4"
+                    android:src="@drawable/bottom_visa"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewMasterCard"
+                    app:layout_constraintHorizontal_chainStyle="spread"/>
+
+                <ImageView
+                    android:id="@+id/imageViewMasterCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.4"
+                    android:src="@drawable/bottom_master_card"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imageViewVisa"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewMir"/>
+
+                <ImageView
+                    android:id="@+id/imageViewMir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.4"
+                    android:src="@drawable/bottom_mir"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imageViewMasterCard"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewPciDss"/>
+
+                <ImageView
+                    android:id="@+id/imageViewPciDss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.4"
+                    android:src="@drawable/bottom_pci_dss"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imageViewMir"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewRecaptcha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:paddingStart="@dimen/marginStart"
+                android:paddingEnd="@dimen/marginEnd"
+                android:fontFamily="@font/rubik_regular"
+                android:textSize="12sp"
+                android:textColor="#272744"
+                android:alpha="0.7"
+                android:textColorLink="#272744"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutBottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">sdk</string>
+    <string name="app_rub_symbol">₽</string>
+
+    <string name="app_no_internet_connection">Отсутствует соединение с интернетом</string>
+    <string name="app_error">Ошибка</string>
+
+    <string name="app_recaptcha_this_site_is_protected_by_reCAPTCHA_and_the">This site is protected by reCAPTCHA and the\u0020</string>
+    <string name="app_recaptcha_google_privacy_policy">Google Privacy Policy</string>
+    <string name="app_recaptcha_and">\u0020and\u0020</string>
+    <string name="app_recaptcha_terms_of_service">Terms of Service</string>
+    <string name="app_recaptcha_apply">\u0020apply.</string>
+
+    <string name="tips_desc_name_is_empty">Надеюсь, вам понравилось</string>
+    <string name="tips_desc_name_is_not_empty">Получит ваши чаевые</string>
+
+    <string name="tips_amount">Введите сумму</string>
+    <string name="tips_amount_desc_start">Введите сумму от\u0020</string>
+    <string name="tips_amount_desc_divider">\u0020до\u0020</string>
+    <string name="tips_amount_desc_end">\u0020руб</string>
+    <string name="tips_comment">Комментарий</string>
+    <string name="tips_pay_card">Банковская карта</string>
+    <string name="tips_agreement">Совершая платеж, вы соглашаетесь с условиями сервиса</string>
+    <string name="tips_agreement_first">Совершая платеж, вы соглашаетесь с</string>
+    <string name="tips_agreement_second">условиями сервиса</string>
+
+    <string name="card_card_number">Номер карты</string>
+    <string name="card_exp_date">Срок действия</string>
+    <string name="card_mm_yy">ММ/ГГ</string>
+    <string name="card_code">Код</string>
+    <string name="card_cvc">CVC</string>
+    <string name="card_pay">Оплатить</string>
+    <string name="card_secure_connection">Безопасное соединение</string>
+    <string name="card_card_number_error">Указан некорректный номер карты</string>
+    <string name="card_exp_date_error">Указан некорректный срок действия</string>
+    <string name="card_code_error">Указан некорректный код</string>
+
+    <string name="completion_send_again">Отправить ещё</string>
+    <string name="completion_try_again">Попробовать ещё раз</string>
+    <string name="completion_close">Закрыть</string>
+    <string name="completion_success_true">Радуется чаевым!</string>
+    <string name="completion_success_true_name_is_empty">Спасибо за платеж с CloudTips!</string>
+    <string name="completion_error">Ошибка оплаты!</string>
+    <string name="tips_fee_title">Перевести получателю полную сумму</string>
+    <string name="tips_fee_description">Так вы компенсируете комиссию сервиса, а с вашей карты спишется %1$s Р</string>
+    <string name="tips_fee_description_disabled">Так вы компенсируете комиссию сервиса, а с вашей карты спишется 0 ₽</string>
+    <string name="field_required_error">Поле обязательно для заполнения</string>
+
+</resources>
