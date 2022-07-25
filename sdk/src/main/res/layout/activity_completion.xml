@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/cloud_tips_logo" />
+            android:src="@drawable/ic_pf_logo" />
 
         <ImageView
             android:id="@+id/imageViewClose"
@@ -133,7 +133,7 @@
                 android:layout_marginStart="@dimen/marginStart"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="@dimen/marginEnd"
-                android:background="@drawable/bg_button_blue"
+                android:background="@drawable/bg_button_red"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layoutDescription">
