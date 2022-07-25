@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".ui.TipsActivity">
 
@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/cloud_tips_logo" />
+            android:src="@drawable/ic_pf_logo" />
 
         <ImageView
             android:id="@+id/imageViewClose"
@@ -310,29 +310,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <RelativeLayout
-                android:id="@+id/buttonPayCard"
-                android:layout_width="0dp"
-                android:layout_height="56dp"
-                android:layout_marginStart="@dimen/marginStart"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="@dimen/marginEnd"
-                android:background="@drawable/bg_button_white"
-                android:elevation="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/feeLayout">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/rubik_regular"
-                    android:text="@string/tips_pay_card"
-                    android:textColor="#272744"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-
             <com.yandex.pay.core.ui.YandexPayButton
                 android:id="@+id/buttonYPay"
                 android:layout_width="0dp"
@@ -346,6 +323,29 @@
                 app:yandexpay_color_scheme="dark"/>
 
             <RelativeLayout
+                android:id="@+id/buttonPayCard"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="@dimen/marginEnd"
+                android:background="@drawable/bg_button_red"
+                android:elevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/feeLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/tips_pay_card"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/buttonGPay"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
@@ -353,6 +353,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="@dimen/marginEnd"
                 android:background="@drawable/bg_button_black"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/buttonYPay">

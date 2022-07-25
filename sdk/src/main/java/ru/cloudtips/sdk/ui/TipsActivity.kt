@@ -197,15 +197,8 @@ internal class TipsActivity : PayActivity() {
         }
 
         if (YandexPayLib.isSupported) {
-            val environment: YandexPayEnvironment
-            val logging: Boolean
-            if (BuildConfig.DEBUG) {
-                environment = YandexPayEnvironment.SANDBOX
-                logging = true
-            } else {
-                environment = YandexPayEnvironment.PROD
-                logging = false
-            }
+            val logging: Boolean = true
+            val environment: YandexPayEnvironment = YandexPayEnvironment.PROD
             YandexPayLib.initialize(this, YandexPayLibConfig(environment = environment, logging = logging))
             binding.buttonYPay.apply {
                 visibility = View.VISIBLE
@@ -245,6 +238,18 @@ internal class TipsActivity : PayActivity() {
         initRecaptchaTextView(binding.textViewRecaptcha)
     }
 
+    private fun getLayout(data: TipsData) {
+        when {
+            data.phone.isNotEmpty() -> getLayout(data.phone)
+            data.layoutId.isNotEmpty() -> checkGetLayoutResponse(
+                Api.ResponseWrapper(arrayListOf(Layout(data.layoutId)),
+                    succeed = true,
+                    errors = arrayListOf()
+                ))
+            else -> return
+        }
+    }
+
     private fun getLayout(phoneNumber: String?) {
         compositeDisposable.add(
             Api.getLayout(phoneNumber)
@@ -252,14 +257,6 @@ internal class TipsActivity : PayActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ layouts -> checkGetLayoutResponse(layouts) }, this::handleError)
         )
-    }
-
-    private fun getLayout(data: TipsData) {
-        when {
-            data.phone.isNotEmpty() -> getLayout(data.phone)
-            data.layoutId.isNotEmpty() -> getPaymentPage(layoutId)
-            else -> return
-        }
     }
 
     private fun checkGetLayoutResponse(response: Api.ResponseWrapper<List<Layout>>) {
@@ -459,7 +456,7 @@ internal class TipsActivity : PayActivity() {
                 ),
                 order = Order(
                     id = OrderID.from(name),
-                    amount = Amount.from(amount()),
+                    amount = Amount.from(getAmountWithFee().toString()),
                     label = name,
                     listOf()
                 ),

@@ -14,8 +14,8 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import io.reactivex.disposables.CompositeDisposable
-import ru.cloudpayments.sdk.BuildConfig
 import ru.cloudpayments.sdk.api.models.CloudpaymentsTransactionError
+import ru.cloudtips.sdk.BuildConfig
 import ru.cloudtips.sdk.CloudTipsSDK
 import ru.cloudtips.sdk.R
 import java.net.UnknownHostException
@@ -52,11 +52,6 @@ abstract class BaseActivity : AppCompatActivity() {
 
     open fun handleError(throwable: Throwable, vararg ignoreClasses: Class<*>?) {
         hideLoading()
-        setResult(RESULT_OK, Intent().apply {
-            val transactionStatus = CloudTipsSDK.TransactionStatus.Cancelled
-            putExtra(CloudTipsSDK.IntentKeys.TransactionStatus.name, transactionStatus)
-        })
-        finish()
         Log.e("handleError", throwable.message, throwable)
         if (ignoreClasses.isNotEmpty()) {
             val classList = listOf(*ignoreClasses)
@@ -76,6 +71,7 @@ abstract class BaseActivity : AppCompatActivity() {
             val transactionStatus = CloudTipsSDK.TransactionStatus.Cancelled
             putExtra(CloudTipsSDK.IntentKeys.TransactionStatus.name, transactionStatus)
         })
+        finish()
     }
 
     fun initRecaptchaTextView(view: TextView) {

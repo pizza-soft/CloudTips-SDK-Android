@@ -1,6 +1,10 @@
 package ru.cloudtips.sdk
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import ru.cloudtips.sdk.CloudTipsSDK.TransactionStatus
@@ -24,6 +28,10 @@ interface CloudTipsSDK {
 		fun getInstance(): CloudTipsSDK {
 			return CloudTipsSDKImpl()
 		}
+
+		fun getContract(): ActivityResultContract<TipsConfiguration, TransactionStatus?> {
+			return CloudTipsContract()
+		}
 	}
 }
 
@@ -44,5 +52,22 @@ internal class CloudTipsSDKImpl: CloudTipsSDK {
 		result: (TransactionStatus) -> Unit
 	): ActivityResultLauncher<TipsConfiguration> {
 		return from.registerForActivityResult(CloudTipsIntentSender(), result)
+	}
+}
+
+internal class CloudTipsContract :
+	ActivityResultContract<TipsConfiguration, CloudTipsSDK.TransactionStatus?>() {
+	override fun createIntent(context: Context, configuration: TipsConfiguration): Intent {
+		return TipsActivity.getStartIntent(context, configuration)
+	}
+
+	override fun parseResult(resultCode: Int, result: Intent?): CloudTipsSDK.TransactionStatus? {
+		if (result == null) return null
+		if (resultCode != Activity.RESULT_OK) return null
+		return when (val transactionStatus =
+			result.getSerializableExtra(CloudTipsSDK.IntentKeys.TransactionStatus.name)) {
+			is CloudTipsSDK.TransactionStatus -> transactionStatus
+			else -> null
+		}
 	}
 }

@@ -10,5 +10,6 @@
     <color name="gray_divider">#e1e7f0</color>
     <color name="background">#f5f9fc</color>
     <color name="error">#E51111</color>
+    <color name="red">#F11E20</color>
     <color name="not_error">#272744</color>
 </resources>
