@@ -145,11 +145,6 @@ class PaymentInfoFragment : Fragment(R.layout.fragment_payment_info), ClickableU
                 launchPaymentClick { listener?.onPayInfoClick() }
             }
         }
-        gpayButton.setOnClickListener {
-            if (validatePayClick()) {
-                launchPaymentClick { requestGPayClick() }
-            }
-        }
         ypayButton.setOnClickListener(YandexPayButton.OnClickListener {
             if (validatePayClick()) {
                 launchPaymentClick { requestYPayClick() }
@@ -193,12 +188,12 @@ class PaymentInfoFragment : Fragment(R.layout.fragment_payment_info), ClickableU
     }
 
     private fun updateGooglePayButton(available: Boolean) = with(viewBinding) {
-        gpayButton.visibility = if (available) View.VISIBLE else View.GONE
+//        gpayButton.visibility = if (available) View.VISIBLE else View.GONE
     }
 
     private fun requestGPayClick() = with(viewBinding) {
         // Disables the button to prevent multiple clicks.
-        gpayButton.isClickable = false
+//        gpayButton.isClickable = false
         viewModel.getMerchantId().observe(viewLifecycleOwner) {
             gPayClient?.getLoadPaymentDataTask(getAmount(), it?.publicId)?.addOnCompleteListener { completedTask ->
                 if (completedTask.isSuccessful) {
@@ -223,7 +218,7 @@ class PaymentInfoFragment : Fragment(R.layout.fragment_payment_info), ClickableU
                 }
 
                 // Re-enables the Google Pay payment button.
-                gpayButton.isClickable = true
+//                gpayButton.isClickable = true
             }
         }
     }
