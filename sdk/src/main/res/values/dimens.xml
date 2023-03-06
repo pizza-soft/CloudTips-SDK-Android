@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <dimen name="marginStart">19dp</dimen>
-    <dimen name="marginEnd">19dp</dimen>
-    <dimen name="marginTop">24dp</dimen>
-
+    <dimen name="profile_avatar_big_radius">16dp</dimen>
+    <dimen name="bubble_outer_spacing">16dp</dimen>
+    <dimen name="bubble_inner_spacing">8dp</dimen>
+    <dimen name="components_outer_spacing">16dp</dimen>
+    <dimen name="components_inner_spacing">12dp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="cpsdk_margin_small">8dp</dimen>
 </resources>

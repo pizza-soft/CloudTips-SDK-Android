@@ -1,3 +1,19 @@
-include ':sdk'
-include ':app'
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://nexus.tcsbank.ru/repository/mvn-mobile/' }
+        maven { url 'https://nexus.tcsbank.ru/repository/mvn-mobile-snapshots/' }
+    }
+}
 rootProject.name = "CloudTips-SDK-Demo"
+include ':app'
+include ':sdk'

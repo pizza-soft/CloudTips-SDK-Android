@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="123dp"
+    android:layout_height="95dp"
+    android:background="@drawable/rating_component_background"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingHorizontal="2dp"
+    android:paddingVertical="12dp">
+
+    <FrameLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal|top"
+        android:background="@drawable/rating_component_image_background"
+        android:duplicateParentState="true">
+
+        <ImageView
+            android:padding="6dp"
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:duplicateParentState="true"
+            app:tint="@color/rating_component_image_tint" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_view"
+        style="@style/RegularText.13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:lines="1"
+        tools:text="Stub" />
+
+</FrameLayout>

@@ -2,15 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.cloudtips.sdk">
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
     <application>
-
-        <activity android:name=".ui.TipsActivity"
-            android:theme="@style/Theme.CloudTipsSDKDemo"/>
-
-        <activity android:name=".ui.CardActivity"
-            android:theme="@style/Theme.CloudTipsSDKDemo"/>
-
-        <activity android:name=".ui.CompletionActivity"
-            android:theme="@style/Theme.CloudTipsSDKDemo"/>
+        <activity
+            android:name="ru.cloudtips.sdk.ui.activities.tips.PaymentTipsActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
     </application>
+
 </manifest>

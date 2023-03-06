@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="blue">#4297df</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="gray_divider">#e1e7f0</color>
-    <color name="background">#f5f9fc</color>
-    <color name="error">#E51111</color>
-    <color name="red">#F11E20</color>
-    <color name="not_error">#272744</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#3B3B3B</color>
+    <color name="colorAccent">#6496DC</color>
+    <color name="colorWhiteF7">#F7F7F7</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTextPrimary">#333333</color>
+    <color name="colorTextSecondary">#9299A2</color>
+    <color name="colorLight">#F6F7F8</color>
+    <color name="colorSwitchInactive">#797A7A</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBubbleBackground">#08001024</color>
+    <color name="colorHint">#8A000000</color>
+    <color name="colorLightBackground">#88ffffff</color>
+    <color name="cpsdk_white">#ffffff</color>
+    <color name="colorInputClearButton">#66000000</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorTextHint">#8A000000</color>
 </resources>

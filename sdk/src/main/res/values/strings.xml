@@ -1,49 +1,55 @@
 <resources>
-    <string name="app_name">sdk</string>
-    <string name="app_rub_symbol">₽</string>
+    <string name="continue_button">Продолжить</string>
+    <string name="phone_input_hint">Номер телефона</string>
+    <string name="phone_input_prefix">+7</string>
+    <string name="or">или</string>
+    <string name="code_input_hint">ID визитки</string>
 
-    <string name="app_no_internet_connection">Отсутствует соединение с интернетом</string>
-    <string name="app_error">Ошибка</string>
+    <string name="main_balance">%1$d ₽</string>
+    <string name="main_balance_title">Сумма чаевых</string>
 
-    <string name="app_recaptcha_this_site_is_protected_by_reCAPTCHA_and_the">This site is protected by reCAPTCHA and the\u0020</string>
-    <string name="app_recaptcha_google_privacy_policy">Google Privacy Policy</string>
-    <string name="app_recaptcha_and">\u0020and\u0020</string>
-    <string name="app_recaptcha_terms_of_service">Terms of Service</string>
-    <string name="app_recaptcha_apply">\u0020apply.</string>
-
-    <string name="tips_desc_name_is_empty">Надеюсь, вам понравилось</string>
-    <string name="tips_desc_name_is_not_empty">Получит ваши чаевые</string>
-
-    <string name="tips_amount">Введите сумму</string>
-    <string name="tips_amount_desc_start">Введите сумму от\u0020</string>
-    <string name="tips_amount_desc_divider">\u0020до\u0020</string>
-    <string name="tips_amount_desc_end">\u0020руб</string>
-    <string name="tips_comment">Комментарий</string>
-    <string name="tips_pay_card">Банковская карта</string>
-    <string name="tips_agreement">Совершая платеж, вы соглашаетесь с условиями сервиса</string>
-    <string name="tips_agreement_first">Совершая платеж, вы соглашаетесь с</string>
-    <string name="tips_agreement_second">условиями сервиса</string>
-
-    <string name="card_card_number">Номер карты</string>
-    <string name="card_exp_date">Срок действия</string>
-    <string name="card_mm_yy">ММ/ГГ</string>
-    <string name="card_code">Код</string>
-    <string name="card_cvc">CVC</string>
-    <string name="card_pay">Оплатить</string>
-    <string name="card_secure_connection">Безопасное соединение</string>
-    <string name="card_card_number_error">Указан некорректный номер карты</string>
-    <string name="card_exp_date_error">Указан некорректный срок действия</string>
-    <string name="card_code_error">Указан некорректный код</string>
-
-    <string name="completion_send_again">Отправить ещё</string>
-    <string name="completion_try_again">Попробовать ещё раз</string>
-    <string name="completion_close">Закрыть</string>
-    <string name="completion_success_true">Радуется чаевым!</string>
-    <string name="completion_success_true_name_is_empty">Спасибо за платеж с CloudTips!</string>
-    <string name="completion_error">Ошибка оплаты!</string>
-    <string name="tips_fee_title">Перевести получателю полную сумму</string>
-    <string name="tips_fee_description">Так вы компенсируете комиссию сервиса, а с вашей карты спишется %1$s Р</string>
-    <string name="tips_fee_description_disabled">Так вы компенсируете комиссию сервиса, а с вашей карты спишется 0 ₽</string>
-    <string name="field_required_error">Поле обязательно для заполнения</string>
-
+    <string name="link_edit_payment_page_goal_title">Цель</string>
+    <string name="link_edit_payment_page_name_subtitle">Получит ваши чаевые</string>
+    <string name="link_edit_payment_page_goal_current_title">Осталось</string>
+    <string name="link_edit_payment_page_set_price_hint">Введите сумму</string>
+    <string name="link_edit_payment_page_set_price">От %1$d ₽ до %2$d ₽</string>
+    <string name="link_edit_sender_info_name_field_title">Имя</string>
+    <string name="link_edit_sender_info_email_field_title">E-mail</string>
+    <string name="link_edit_sender_info_phone_field_title">Телефон</string>
+    <string name="link_edit_sender_info_comment_field_title">Комментарий</string>
+    <string name="link_edit_sender_info_city_field_title">Город</string>
+    <string name="link_edit_payment_page_do_you_like">Как вам \"%1$s\"\?</string>
+    <string name="link_edit_payment_page_tips_info_title">Оплатить комиссию</string>
+    <string name="link_edit_payment_page_tips_info_subtitle">Спишем сумму чаевых и комиссию сервиса — %1$s ₽</string>
+    <string name="link_edit_payment_page_bank_button">Карта</string>
+    <string name="tips_field_name">Имя и фамилия</string>
+    <string name="tips_field_email">Электронная почта</string>
+    <string name="tips_field_phone">Телефон</string>
+    <string name="tips_field_city">Город</string>
+    <string name="tips_field_comment">Комментарий</string>
+    <string name="tips_field_email_hint">На нее придет письмо после перевода чаевых</string>
+    <string name="bubble_text">+%1$d ₽</string>
+    <string name="link_edit_payment_page_info_text">Согласен с %1$s</string>
+    <string name="link_edit_payment_page_info_text_subs">условиями</string>
+    <string name="link_edit_payment_page_captcha_text">This site is protected by reCAPTCHA and the Google\n%1$s and %2$s apply</string>
+    <string name="link_edit_payment_page_captcha_text_subs_privacy">Privacy Policy</string>
+    <string name="link_edit_payment_page_captcha_text_subs_terms">Terms of Service</string>
+    <string name="card_fragment_sum_text">Сумма %1$s ₽</string>
+    <string name="card_fragment_hint_card_number">Номер карты</string>
+    <string name="card_fragment_hint_card_date">Дата</string>
+    <string name="card_fragment_hint_card_cvc">CVC-код</string>
+    <string name="card_fragment_info_label">Данные карты защищены</string>
+    <string name="pay_button">Оплатить</string>
+    <string name="fragment_payment_success_subtitle">Радуется вашим чаевым</string>
+    <string name="fragment_payment_success_main_button">Отправить еще чаевые</string>
+    <string name="fragment_payment_failure_subtitle">Не получилось оплатить</string>
+    <string name="fragment_payment_failure_main_button">Попробовать еще раз</string>
+    <string name="field_required">Поле обязательно</string>
+    <string name="field_invalid">Некорректный формат</string>
+    <string name="card_fragment_error_wrong_card_number">Некорректный номер</string>
+    <string name="card_fragment_error_wrong_card_cvc">Некорректный код</string>
+    <string name="fragment_payment_error_title">Что-то пошло не так</string>
+    <string name="fragment_payment_error_subtitle">Попробуйте позже</string>
+    <string name="fragment_payment_error_main_button">Понятно</string>
+    <string name="field_amount_incorrect">Некорректная сумма</string>
 </resources>

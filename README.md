@@ -1,9 +1,9 @@
-# CloudTips SDK for Android 
+# CloudTips SDK for Android
 
 CloudTips SDK позволяет интегрировать прием чаевых в мобильные приложение для платформы Android.
 
 ### Требования
-Для работы CloudTips SDK необходим Android версии 4.4 (API level 19) или выше.
+Для работы CloudTips SDK необходим Android версии 6 (API level 23) или выше.
 
 ### Подключение
 Для подключения SDK в build.gradle уровня проекта добавить репозитрий Jitpack:
@@ -16,11 +16,12 @@ allprojects {
 		}
 	}
 ```
-И в build.gradle уровня приложения доюавить зависимость:
+
+И в build.gradle уровня приложения добавить зависимость:
 
 ```
 dependencies {
-	implementation 'com.github.cloudpayments:CloudTips-SDK-Android:1.1.4'
+	implementation 'com.github.cloudpayments:CloudTips-SDK-Android:2.0.1'
 }
 ```
 
@@ -57,17 +58,19 @@ defaultConfig {
 
 ### Использование
 
-Создайте объект TipsData с параметрами номер телефона (в формате +7**********) и имя пользователя (если пользователя с таким номером телефона нет в системе CloudTips, то будет зарегистрирован новый пользователь с этим именем), затем передайте его в объект TipsConfiguration и запустите SDK. 
-
-Если вы являетесь партнером CloudTips, передайте в конфигурацию id партнера.
+Создайте инстанс объекта TipsManager
 
 ```
-val tipsData = TipsData(phone, "User name", "Partner ID")
-val configuration = TipsConfiguration(tipsData) 
-val configuration = TipsConfiguration(tipsData, true) // Если необходимо включить режим тестирования
-CloudTipsSDK.getInstance().start(configuration, this)
+val tipsManager = TipsManager.getInstance(context)
+```
+
+Для запуска оплаты чаевых
+
+```
+tipsManager.launch(layoutId)
+, где layoutId - идентификатор визитки CloudTips
 ```
 
 ### Поддержка
 
-По возникающим вопросам техничечкого характера обращайтесь на support@cloudpayments.ru
+По возникающим вопросам техничечкого характера обращайтесь на support@cp.ru

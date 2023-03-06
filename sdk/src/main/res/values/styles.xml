@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <!--        <item name="android:textViewStyle">@style/RegularText</item>-->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+
+    <style name="ButtonMain" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:background">@drawable/button_blue_background</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonBlack" parent="ButtonMain">
+        <item name="android:backgroundTint">@color/colorBlack</item>
+    </style>
+
+
+    <style name="RegularText" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="RegularText.13">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="RegularText.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="RegularText.16" parent="RegularText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MediumText" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="MediumText.30">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="MediumText.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="MediumText.22">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="MediumText.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="MediumText.12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="MediumText.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MediumText.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BoldText" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="BoldText.16" parent="BoldText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BoldText.20" parent="BoldText">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="BoldText.30" parent="BoldText">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="BoldText.24" parent="BoldText">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="RegularText.Light">
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <style name="RegularText.Light.12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="RegularText.Light.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="RegularText.Light.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="LinkEditPaymentPage.InputText" parent="RegularText.16">
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:paddingBottom">18dp</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+        <item name="android:background">@color/colorWhiteF7</item>
+    </style>
+
+
+    <style name="SwitchTheme" parent="AppTheme">
+        <item name="android:colorForeground">@color/colorSwitchInactive</item>
+        <item name="colorSwitchThumbNormal">@color/colorWhite</item>
+    </style>
+
+    <style name="TextInputTheme" parent="AppTheme">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@drawable/background_text_input</item>
+        <item name="maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextInputCardTheme" parent="AppTheme">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@drawable/background_text_input_card</item>
+        <item name="maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextInputLayout">
+        <item name="helperTextTextColor">@color/colorRed</item>
+        <item name="endIconDrawable">@drawable/ic_input_clear</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="endIconTint">@color/colorInputClearButton</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="TextInputOutlinedLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="boxBackgroundColor">@color/text_input_background</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="hintTextAppearance">@style/RegularText.Light.12</item>
+        <item name="hintTextColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorTextHint</item>
+        <item name="helperTextTextColor">@color/colorRed</item>
+        <item name="endIconDrawable">@drawable/ic_input_clear</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="endIconTint">@color/colorInputClearButton</item>
+    </style>
+
+    <style name="TextInputOutlinedEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textAppearance">@style/RegularText.16</item>
+        <item name="android:textCursorDrawable">@drawable/text_input_cursor</item>
+        <item name="android:maxLength">4000</item>
+    </style>
+
+</resources>

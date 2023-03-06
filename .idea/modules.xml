@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CloudTips-SDK-Demo.iml" filepath="$PROJECT_DIR$/.idea/modules/CloudTips-SDK-Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CloudTips-SDK-Demo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CloudTips-SDK-Demo.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CloudTips-SDK-Demo.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CloudTips-SDK-Demo.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CloudTips-SDK-Demo.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CloudTips-SDK-Demo.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CloudTips-SDK-Demo.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CloudTips-SDK-Demo.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sdk/CloudTips-SDK-Demo.sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/sdk/CloudTips-SDK-Demo.sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sdk/CloudTips-SDK-Demo.sdk.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sdk/CloudTips-SDK-Demo.sdk.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sdk/CloudTips-SDK-Demo.sdk.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sdk/CloudTips-SDK-Demo.sdk.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sdk/CloudTips-SDK-Demo.sdk.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sdk/CloudTips-SDK-Demo.sdk.unitTest.iml" />
+    </modules>
+  </component>
+</project>

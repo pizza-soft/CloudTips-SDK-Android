@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="license_url" translatable="false">https://static.cloudpayments.ru/docs/cloudtips_oferta.pdf</string>
+    <string name="google_captch_privacy" translatable="false">https://policies.google.com/privacy</string>
+    <string name="google_captch_terms" translatable="false">https://policies.google.com/terms</string>
+    <string name="ypay_merchant_id" translatable="false">1193a702-d3c0-4637-a7c0-2ac95b73ee29</string>
+    <string name="ypay_merchant_name" translatable="false">cloudpayments</string>
+    <string name="ypay_merchant_url" translatable="false">https://cloudpayments.ru/</string>
+</resources>
